@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-library</title>
+    <style>
+        body{
+            margin: 0px;
+            align-items: center;
+        }
+        .content{
+            background-color:aliceblue;
+        }
+        .navcolor{ 
+            display: flex;
+            background-color: rgb(139, 96, 225);  
+        }
+        .left{
+            width: 70%;
+            padding: 5px;
+        }
+        .right{
+            width: 30%;
+            display: flex;
+            margin-left: auto;
+            padding: 5px;
+        }
+        ul{
+            display: flex;
+            list-style-type: none;
+            background-color: rgb(139, 96, 225);
+            padding: 3px;
+            margin: 0px;
+            padding-left: 10px;
+        }
+        li a{
+            text-decoration: none;
+            color: white;
+            margin-right: 15px;
+            padding: 10%;
+            font-size: 125%;
+        }
+        li a:hover{
+            color: rgb(219, 219, 219);
+            font-size: 18.5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navcolor">
+        <nav class="left">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+        <nav class="right">
+            <form action="/Searchquery" method="post">
+                <input type="search" name="Search" id="Search" placeholder="Enter book title" style=" border-radius: 5px; margin: 2.5px; padding: 3px;
+                border-width: 0px; width: 60%;">
+                <button class="submitsearch" style="color: rgb(139, 96, 225); background-color:white;
+                border-radius: 5px; border-width: 0px; margin: 3px; margin-left: 10px;">Search</button>
+                </form>
+        </nav>
+    </div>
+    <h1 style="font-size: 50px;">E-library</h1>
+    <section style="height: 80vh; background-color:rgba(216, 209, 227, 0.764);">
+        {{output | safe}}
+    </section>
+    <section id="service" style="margin: 5px; margin-bottom: 20px;">
+        <h3>E-library</h3>
+        <p>Online Library where you can read book also you can sare your books.</p>
+    </section>
+    <section id="Contact" style="margin: 5px; margin-bottom: 20px;">
+        <h3>Contact</h3>
+        <a href="www.whatsapp.com">Whatsapp</a>
+        <br>
+        <p>or</p>
+        <p> Mail on tayyabsiddiqui9892@gmail.com
+        </p>
+    </section>
+    <section id="About" style="margin: 5px; margin-bottom: 40px;">
+        <h3>About</h3>
+        <p>
+            Welcome to E-library <br>
+            made by Tayyab Siddiqui
+        </p>
+    </section>
+    <div class="bottom" style="position: fixed; bottom: 0; width: 100%; display: flex;">
+        <form action="/" method="get" style="width: 33.33%; ">
+            <button class="Home" style="width: 100%; padding-top: 2%; padding-bottom: 2%;
+            color: rgb(139, 96, 225); font-size: 15px;">Home</button>
+        </form>
+        <form action="/upload" method="get" style="width: 33.33%; ">
+            <button class="Upload" style="width: 100%; padding-top: 2%; padding-bottom: 2%; 
+            color: rgb(139, 96, 225); font-size: 15px;">Upload</button>
+        </form>
+        <form action="/profiles" method="get" style="width: 33.33%;">
+            <button class="profile" style="width: 100%; padding-top: 2%; padding-bottom: 2%;
+            color: rgb(139, 96, 225); font-size: 15px;">Profile</button>
+        </form>
+        
+    </div>
+</body>
+</html>
